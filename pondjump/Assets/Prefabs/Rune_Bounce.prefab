@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8691155711381929110}
   - component: {fileID: 5785471092179387868}
   - component: {fileID: 7021012241009336648}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 5761565106904556436}
   - component: {fileID: 553375267014621580}
   - component: {fileID: 5705051360115507427}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Rune_Bounce
   m_TagString: BounceRune
   m_Icon: {fileID: 0}

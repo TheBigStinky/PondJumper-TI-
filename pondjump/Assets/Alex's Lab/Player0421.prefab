@@ -5724,9 +5724,6 @@ MonoBehaviour:
   whatIsGrappleable:
     serializedVersion: 2
     m_Bits: 2304
-  notIgnored:
-    serializedVersion: 2
-    m_Bits: 16223
   gunTip: {fileID: 4470485353835727449}
   camera: {fileID: 4470485352360385580}
   player: {fileID: 4470485353223930160}
@@ -6015,7 +6012,7 @@ RectTransform:
   m_GameObject: {fileID: 4470485353521563876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6784, y: 1.6784, z: 1.6784}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470485352675790736}
   - {fileID: 4470485352831494804}
@@ -7134,7 +7131,7 @@ RectTransform:
   m_GameObject: {fileID: 4470485354028420374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6784, y: 1.6784, z: 1.6784}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470485352788760478}
   - {fileID: 4470485352258613917}
