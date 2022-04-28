@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232e76fe975244a12bf8e1116f118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeliveryText: Press [E] to Grapple to Mushrooms
+  DeliveryText: Click the Middle-Mouse-Button to Grapple to Mushrooms
   DeliveryImage: {fileID: 21300000, guid: d59fe7a9e4b6e4ceda43da8cf383a12d, type: 3}
 --- !u!65 &6929664930174055779
 BoxCollider:
