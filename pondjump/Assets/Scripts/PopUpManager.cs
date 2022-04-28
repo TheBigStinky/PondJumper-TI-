@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 
@@ -14,7 +13,6 @@ public class PopUpManager : MonoBehaviour
     string _recievedText;
     Sprite _recievedImage;
     bool textOnly;
-    PlayerInput playerInput;
 
     public int Collection;
 
@@ -23,7 +21,6 @@ public class PopUpManager : MonoBehaviour
     {
         popUpText = GameObject.Find("RecievedText(T) (TMP)").GetComponent<TextMeshProUGUI>();
         popUpImageText = GameObject.Find("RecievedText(I) (TMP)").GetComponent<TextMeshProUGUI>();
-        playerInput = GetComponent<PlayerInput>();
 
         PopUpTextCanvas.SetActive(false);
         PopUpImageCanvas.SetActive(false);
@@ -31,9 +28,8 @@ public class PopUpManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "PopUpText")
+        if(other.transform.tag == "PopUpText")
         {
-            playerInput.enabled = false;
             textOnly = true;
             PopUpTextCanvas.SetActive(true);
             _recievedText = other.GetComponent<PopUp>().DeliveryText;
@@ -45,9 +41,8 @@ public class PopUpManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             other.gameObject.SetActive(false);
         }
-        else if (other.transform.tag == "PopUpImage")
+        else if(other.transform.tag == "PopUpImage")
         {
-            playerInput.enabled = false;
             textOnly = false;
             PopUpImageCanvas.SetActive(true);
             _recievedText = other.GetComponent<PopUp>().DeliveryText;
@@ -62,7 +57,7 @@ public class PopUpManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             other.gameObject.SetActive(false);
         }
-        else if (other.transform.tag == "Collectable")
+        else if(other.transform.tag == "Collectable")
         {
             Collection++;
             other.gameObject.SetActive(false);
@@ -73,11 +68,9 @@ public class PopUpManager : MonoBehaviour
     public void Continue()
     {
         if (textOnly)
-        { PopUpTextCanvas.SetActive(false); }
-        else { PopUpImageCanvas.SetActive(false); }
+        { PopUpTextCanvas.SetActive(false); } else { PopUpImageCanvas.SetActive(false); }
         Time.timeScale = 1;
         AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.Locked;
-        playerInput.enabled = true;
     }
 }
