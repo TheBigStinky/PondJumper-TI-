@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Basin Water
   m_Shader: {fileID: 4800000, guid: 206e4b0fd7976c742b851eef70622872, type: 3}
-  m_ShaderKeywords: _CAUSTICSMODE_2D _COLORMODE_COLORS _DISPLACEMENTMODE_OFF _FOAM_RIPPLE_ON
-    _NORMALSMODE_SINGLE _REFLECTIONMODE_CUBEMAP
+  m_ShaderKeywords: _CAUSTICSMODE_2D _COLORMODE_COLORS _DISPLACEMENTMODE_OFF _DYNAMIC_EFFECTS_ON
+    _FOAM_ON _FOAM_RIPPLE_ON _NORMALSMODE_SINGLE _REFLECTIONMODE_CUBEMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -61,7 +61,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FoamTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f5fbcd95e112fec4cb4636634af14aaf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -146,23 +146,23 @@ Material:
     - _DetailNormalMapScale: 1
     - _DispMask: 0
     - _DisplacementMode: 0
-    - _Distortion: 32
+    - _Distortion: 37.2
     - _DoubleSided: 0
     - _DstBlend: 0
     - _DynamicDisplacement: 1
-    - _DynamicEffects: 0
-    - _DynamicFoam: 1
+    - _DynamicEffects: 1
+    - _DynamicFoam: 0.291
     - _DynamicNormal: 1
     - _EdgeFade: 0
     - _EdgeSize: 0.2
     - _EnvironmentReflections: 1
     - _FlowIntensity: 0.12
     - _FlowSpeed: 10
-    - _Foam: 0
+    - _Foam: 1
     - _FoamCapsIntensity: 1
     - _FoamCapsRangeMax: 1
     - _FoamCapsRangeMin: 0
-    - _FoamDistortion: 0
+    - _FoamDistortion: 0.3
     - _FoamRippleDistance: 0.31
     - _FoamRippleSize: 1.46
     - _FoamRippleSpeed: -1
@@ -179,7 +179,7 @@ Material:
     - _Metallic: 0
     - _NormalFar: 0
     - _NormalFarDistance: 100
-    - _NormalMapAIntensity: 0.497
+    - _NormalMapAIntensity: 0.415
     - _NormalMapBIntensity: 1
     - _NormalMapFarIntensity: 1
     - _NormalsMode: 0
@@ -198,7 +198,7 @@ Material:
     - _ScatteringIntensity: 1
     - _ScatteringRangeMax: 2
     - _ScatteringRangeMin: 0.4131296
-    - _Smoothness: 0.675
+    - _Smoothness: 0.578
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpeedMul: 0
@@ -218,11 +218,11 @@ Material:
     - _CausticsSpeed: {r: 1, g: 1, b: -0.2, a: -0.33}
     - _CausticsSpeed3D: {r: 1, g: 1, b: 1, a: 1}
     - _CausticsTiling: {r: 0.2, g: 0.2, b: 0.1, a: 0.1}
-    - _Color: {r: 0.25490195, g: 0.98039216, b: 0.6740629, a: 1}
-    - _DepthColor: {r: 0, g: 0.25999996, b: 0.39999998, a: 1}
+    - _Color: {r: 0.13407795, g: 0.21698111, b: 0.13950194, a: 1}
+    - _DepthColor: {r: 0, g: 0.8666667, b: 0.025236687, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlowTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamColor: {r: 0.37500745, g: 0.5566038, b: 0.33868814, a: 1}
     - _FoamTiling: {r: 1, g: 1, b: 1, a: 1}
     - _GerstnerWaveA: {r: 0.84712195, g: -0.53139853, b: 0.66, a: 6.55}
     - _GerstnerWaveB: {r: 0, g: 1, b: 0.05, a: 4}
@@ -243,7 +243,7 @@ Material:
     - _RefractionKey7: {r: -1, g: -1, b: -1, a: -1}
     - _RefractionKey8: {r: -1, g: -1, b: -1, a: -1}
     - _ScatteringColor: {r: 0.2783019, g: 1, b: 0.78321666, a: 1}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.79227763, g: 0.990566, b: 0.76161444, a: 1}
     - _UnderWaterColor: {r: 0.21226415, g: 0.46418187, b: 0.8490566, a: 0.1764706}
   m_BuildTextureStacks: []
 --- !u!114 &3734885289509101253
