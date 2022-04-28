@@ -108,11 +108,11 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Paused"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""359d3fd8-8473-43d4-a01b-0ad72e35abd2"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Key"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=1)""
                 },
                 {
                     ""name"": ""Console"",
@@ -394,14 +394,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""9e6ef500-d9a6-41b6-a9f2-918b9911a912"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Paused"",
-                    ""type"": ""Button"",
-                    ""id"": ""5ce692dc-2964-4b86-976d-6a9f927fac8e"",
-                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -824,17 +816,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2e6f8128-71b3-400e-9fbd-72c8b220f7ba"",
-                    ""path"": ""<Keyboard>/p"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Paused"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -868,7 +849,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         m_UI_Cancel = m_UI.FindAction("Cancel", throwIfNotFound: true);
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
-        m_UI_Paused = m_UI.FindAction("Paused", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1057,7 +1037,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
     private readonly InputAction m_UI_Cancel;
     private readonly InputAction m_UI_Submit;
     private readonly InputAction m_UI_Navigate;
-    private readonly InputAction m_UI_Paused;
     public struct UIActions
     {
         private @FirstPersonControls m_Wrapper;
@@ -1072,7 +1051,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
         public InputAction @Submit => m_Wrapper.m_UI_Submit;
         public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
-        public InputAction @Paused => m_Wrapper.m_UI_Paused;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1112,9 +1090,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 @Navigate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
                 @Navigate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
                 @Navigate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
-                @Paused.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPaused;
-                @Paused.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPaused;
-                @Paused.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPaused;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -1149,9 +1124,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 @Navigate.started += instance.OnNavigate;
                 @Navigate.performed += instance.OnNavigate;
                 @Navigate.canceled += instance.OnNavigate;
-                @Paused.started += instance.OnPaused;
-                @Paused.performed += instance.OnPaused;
-                @Paused.canceled += instance.OnPaused;
             }
         }
     }
@@ -1184,6 +1156,5 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         void OnCancel(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
         void OnNavigate(InputAction.CallbackContext context);
-        void OnPaused(InputAction.CallbackContext context);
     }
 }

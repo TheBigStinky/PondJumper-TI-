@@ -3,7 +3,10 @@ guid: 53f666ffe921d244e82f28bb650752d7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pickupEffect: {fileID: 5747404535674564849, guid: d4f1872d7efda4ecf82aa210d517fcb3, type: 3}
+  - PopUpTextCanvas: {instanceID: 0}
+  - PopUpImageCanvas: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
