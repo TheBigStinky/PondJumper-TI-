@@ -7,7 +7,6 @@ using TMPro;
 
 public class PopUpManager : MonoBehaviour
 {
-    public GameObject pickupEffect;
     public GameObject PopUpTextCanvas;
     public GameObject PopUpImageCanvas;
     TextMeshProUGUI popUpText;
@@ -65,8 +64,6 @@ public class PopUpManager : MonoBehaviour
         }
         else if (other.transform.tag == "Collectable")
         {
-            // Instantiate(pickupEffect, transform.position, transform.rotation);
-            pickupEffect.GetComponent<ParticleSystem>().Play();
             Collection++;
             other.gameObject.SetActive(false);
             Debug.Log("Score: " + Collection);

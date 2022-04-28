@@ -16,9 +16,6 @@ public class pausemenu : MonoBehaviour
 
     private void Awake()
     {
-        PauseCanvas1 = GameObject.Find("PauseMenu");
-        AimCanvas = GameObject.Find("CrossHairBase");
-        AudioManager = GameObject.Find("AudioManager 1");
         action = new FirstPersonControls();
     }
 
@@ -59,8 +56,8 @@ public class pausemenu : MonoBehaviour
         paused = true;
         AimCanvas.SetActive(false);
         PauseCanvas1.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-
+        Cursor.lockState = CursorLockMode.None; 
+        
     }
 
 

@@ -9,107 +9,35 @@ using UnityEngine.SceneManagement;
 
 public class ChangeSceneButton : MonoBehaviour
 {
-	
+	public Slider mousey;
+	public float valSlide;
     private void Start()
     {
 		for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
 		{
 			Debug.Log("Scene " + i + ": " + SceneManager.GetSceneByBuildIndex(i).name);
 		}
-
-		FindObjectOfType<AudioManager>().Play("Theme1");
-
-
-	}
-
-   
-	//Button Sounds
-    public void OnPlaySound()
-	{
-		FindObjectOfType<AudioManager>().Play("PlayMM");
-	}
-
-	public void PressButton()
-    {
-		FindObjectOfType<AudioManager>().Play("ButtonPressGeneral");
-	}
-
-	public void GoBack()
-    {
-		FindObjectOfType<AudioManager>().Play("LillyClick");
-    }
-
-	public void HSMenu()
-    {
 		
-		
-			FindObjectOfType<AudioManager>().Play("HSClick");
-	
+		mousey.onValueChanged.AddListener(delegate { ChangeSlideValue(); });
 	}
 
-	public void Quit()
-	{
-		FindObjectOfType<AudioManager>().Play("Quit");
-	}
-
-
-	//Starts Environmental Sounds
-	public void GeneralAmb()
+    private void ChangeSlideValue()
     {
-		FindObjectOfType<AudioManager>().Play("General Ambiance");
+		valSlide = mousey.value;
 	}
 
-	public void AmbBurbs()
+    public void PlaySound()
 	{
-		FindObjectOfType<AudioManager>().Play("AmbientSuburbs");
+		playselect.PlayOneShot(selectbeep);
 	}
 
-	public void BreezeGrass()
-	{
-		FindObjectOfType<AudioManager>().Play("breezeandgrass");
-	}
-
-	public void FactoryAmb()
-	{
-		FindObjectOfType<AudioManager>().Play("FactoryAmbiance");
-	}
-
-	public void FrogCroak()
+	public void GoBackSound()
     {
-		FindObjectOfType<AudioManager>().Play("FrogCroak");
-	}
-
-	public void EveRain()
-	{
-		FindObjectOfType<AudioManager>().Play("Rain");
-	}
-	public void SoftWind()
-	{
-		FindObjectOfType<AudioManager>().Play("Soft-Wind");
-	}
-
-	public void WatDrips()
-	{
-		FindObjectOfType<AudioManager>().Play("WaterDrips");
-	}
-
-	public void CaveWat()
-	{
-		FindObjectOfType<AudioManager>().Play("WaterInCave");
-	}
-
-	public void WellWat()
-	{
-		FindObjectOfType<AudioManager>().Play("WellWater");
-	}
-
-	public void VentWind()
-    {
-		FindObjectOfType<AudioManager>().Play("WindInVent");
+		playselect.PlayOneShot(scrollbeep);
 	}
 	public void LoadScene(int sceneName)
 	{
-		
+		playselect.PlayOneShot(selectbeep);
 		change = sceneName;
 		Invoke("ChangeScene", 2f);
 		Debug.Log(change);
@@ -134,6 +62,8 @@ public class ChangeSceneButton : MonoBehaviour
 
 
 	public int change;
-	
+	public AudioSource playselect;
+	public AudioClip scrollbeep;
+	public AudioClip selectbeep;
 
 }
