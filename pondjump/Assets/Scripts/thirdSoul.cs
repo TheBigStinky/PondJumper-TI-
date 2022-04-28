@@ -13,6 +13,7 @@ public class thirdSoul : MonoBehaviour
     private Rigidbody rigidBody;
     private GameObject mainCamera;
     private runeBehavior runeBehavior;
+    private PlayerInput playerInput;
     public AudioClip runeCast;
     public AudioSource source;
     public AudioClip catchCast;
@@ -83,6 +84,8 @@ public class thirdSoul : MonoBehaviour
     public float mouseSensitivity;
     //the live rotation of the camera and player
     float xRotation;
+    //Mouse x input per call
+    float mouseX;
     [Tooltip("How many updates before a rune can be used again")]
     public float RuneRefresh;
     //the timer for RuneRefresh
@@ -129,6 +132,7 @@ public class thirdSoul : MonoBehaviour
         controller = GetComponent<CharacterController>();
         rigidBody = GetComponent<Rigidbody>();
         runeBehavior = GetComponent<runeBehavior>();
+        playerInput = GetComponent<PlayerInput>();
 
         firstPersonControls = new FirstPersonControls();
         firstPersonControls.Player.Enable();
@@ -144,6 +148,7 @@ public class thirdSoul : MonoBehaviour
 
     private void Start()
     {
+        Pause = false;
         SoulSwitch(true);
         groundRadiusStored = GroundRadius;
 
@@ -164,6 +169,9 @@ public class thirdSoul : MonoBehaviour
         Move();
         runeTimer++;
 
+        Look();
+
+        //Debug.Log("move input: " + firstPersonControls.Player.Look.ReadValue<Vector2>());
         //Debug.Log("RigidBody: " + rigidBody.velocity + " Controller: " + controller.velocity);
         //Debug.Log("Rigid Velocity: " + rigidBody.velocity.magnitude + " Controller Velocity: " + controller.velocity.magnitude);
     }
@@ -248,15 +256,22 @@ public class thirdSoul : MonoBehaviour
         rigidBody.useGravity = true;
     }
 
-    //Debugging position setter
-    public void ResetPos(InputAction.CallbackContext context)
+    public void PauseTogg(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if(context.started && playerInput.currentActionMap.name == "Player" && !Pause) 
         {
-            Instantiate(Cube, transform.position, Quaternion.FromToRotation(Vector3.up, Vector3.up));
-            transform.position = ResetPoint;
-
+            playerInput.SwitchCurrentActionMap("UI");
+            Debug.Log("current action map: " + playerInput.currentActionMap);
+            Pause = true;
         }
+        else if(context.started && playerInput.currentActionMap.name == "UI" && Pause) 
+        {
+            playerInput.SwitchCurrentActionMap("Player");
+            Debug.Log("current action map: " + playerInput.currentActionMap);
+            Pause = false;
+        }
+
+        
     }
 
     //Detects if Ctrl is being held
@@ -373,18 +388,16 @@ public class thirdSoul : MonoBehaviour
     }
 
     //Rotates the player horizontally and the camera vertically in accordance with the mouse
-    public void Look(InputAction.CallbackContext context)
+    void Look()
     {
-
-        float mouseX = context.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
-        float mouseY = context.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
+        float mouseX = firstPersonControls.Player.Look.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
+        float mouseY = firstPersonControls.Player.Look.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         mainCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.Rotate(Vector3.up * mouseX);
-
+        transform.Rotate(Vector2.up * mouseX);
     }
 
     //Checks the surface being aimed at and instanciates a rune on it if valid
@@ -514,13 +527,13 @@ public class thirdSoul : MonoBehaviour
         }
     }
 
-    public void Update()
+    /*public void Update()
     {
         if (pausemenu.paused)
             return;
 
 
-    }
+    }*/
 
     void LaunchIndicatorCheck(float active)
     {
