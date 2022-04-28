@@ -4645,103 +4645,7 @@ MonoBehaviour:
     m_ActionId: d4d6ff39-250a-465d-b137-fdbe56910c63
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4470485353223930172}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: Look
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 92cfc370-3a97-4c4a-912a-3e8d54d5fa65
     m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
@@ -4845,11 +4749,15 @@ MonoBehaviour:
     m_ActionId: e15688f6-919c-417f-9a6a-f5938ad88a50
     m_ActionName: Player/Scroll[/Mouse/scroll]
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57c23cbe-2d92-4b20-b080-d8416891ebb3
+    m_ActionName: Player/Reset Pos[/Keyboard/5]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4470485353223930172}
         m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
-        m_MethodName: ResetPos
-        m_Mode: 0
+        m_MethodName: PauseTogg
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4858,10 +4766,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 57c23cbe-2d92-4b20-b080-d8416891ebb3
-    m_ActionName: Player/Reset Pos[/Keyboard/5]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 359d3fd8-8473-43d4-a01b-0ad72e35abd2
     m_ActionName: Player/Paused[/Keyboard/p]
   - m_PersistentCalls:
@@ -4920,6 +4824,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9e6ef500-d9a6-41b6-a9f2-918b9911a912
     m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4470485353223930172}
+        m_TargetAssemblyTypeName: thirdSoul, Assembly-CSharp
+        m_MethodName: PauseTogg
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_ActionId: 5ce692dc-2964-4b86-976d-6a9f927fac8e
+    m_ActionName: UI/Paused[/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -4967,7 +4887,7 @@ MonoBehaviour:
   AirStrafeClamp: 15
   SpeedChangeRate: 3
   TargetGravity: -0.15
-  mouseSensitivity: 2.5
+  mouseSensitivity: 10
   RuneRefresh: 15
   MaxBounceRunes: 0
   MaxLaunchCatchRunes: 1
