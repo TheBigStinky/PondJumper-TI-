@@ -108,11 +108,11 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Paused"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""359d3fd8-8473-43d4-a01b-0ad72e35abd2"",
-                    ""expectedControlType"": ""Key"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=1)""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Console"",

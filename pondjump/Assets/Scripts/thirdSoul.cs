@@ -124,7 +124,7 @@ public class thirdSoul : MonoBehaviour
     public GameObject grapplingGun;
     float reduction;
 
-
+    int pauseTime;
     public bool Pause;
 
     private void Awake()
@@ -161,6 +161,7 @@ public class thirdSoul : MonoBehaviour
 
         LaunchIndicatorCheck(0);
         LaunchBandage();
+        pauseTime = 0;
     }
 
     private void FixedUpdate()
@@ -169,6 +170,8 @@ public class thirdSoul : MonoBehaviour
         Move();
         runeTimer++;
 
+
+        //PauseTimer();
         Look();
 
         //Debug.Log("move input: " + firstPersonControls.Player.Look.ReadValue<Vector2>());
@@ -256,30 +259,33 @@ public class thirdSoul : MonoBehaviour
         rigidBody.useGravity = true;
     }
 
-    public void PauseTogg(InputAction.CallbackContext context)
+    /*
+    public void PauseTogg()
     {
-        if(context.started && playerInput.currentActionMap.name == "Player" && !Pause) 
+        if(pauseTime > 15) 
         {
             playerInput.SwitchCurrentActionMap("UI");
             Debug.Log("current action map: " + playerInput.currentActionMap);
-            Pause = true;
+            pauseTime = 0;
         }
-        else if(context.started && playerInput.currentActionMap.name == "UI" && Pause) 
+    }
+    
+    public void UnpauseTogg()
+    {
+        if(pauseTime > 15) 
         {
             playerInput.SwitchCurrentActionMap("Player");
             Debug.Log("current action map: " + playerInput.currentActionMap);
-            Pause = false;
+            pauseTime = 0;
         }
-
-        
     }
 
-    //Detects if Ctrl is being held
-    public void Crouch(InputAction.CallbackContext context)
+    void PauseTimer()
     {
-        if (context.started) { crouching = true; }
-        else if (context.canceled) { crouching = false; }
+        pauseTime++;
+        //Debug.Log("pauseTime: " + pauseTime);
     }
+    */
 
     //Detects if Shift is being held
     public void Sprint(InputAction.CallbackContext context)
