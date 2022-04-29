@@ -4955,6 +4955,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 16215
   offGroundTimerEnd: 0.33
   offGroundTimer: 0
   FeetTouching: []
@@ -5725,7 +5728,10 @@ MonoBehaviour:
   Refresh: 5
   whatIsGrappleable:
     serializedVersion: 2
-    m_Bits: 2304
+    m_Bits: 2048
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 16215
   gunTip: {fileID: 4470485353835727449}
   camera: {fileID: 4470485352360385580}
   player: {fileID: 4470485353223930160}
