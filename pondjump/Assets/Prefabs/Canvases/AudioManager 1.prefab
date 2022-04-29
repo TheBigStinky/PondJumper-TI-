@@ -87,13 +87,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Theme1
-    clip: {fileID: 8300000, guid: 3d0f5418db3534b4c81380c2918ee355, type: 3}
+    clip: {fileID: 8300000, guid: 3df5beee6401c6445996a25a7fd155f8, type: 3}
     volume: 0.754
     pitch: 0.61
     loop: 0
     source: {fileID: 0}
   - name: Theme2
-    clip: {fileID: 8300000, guid: 250a2b63848bae4448fef441eb5a2b07, type: 3}
+    clip: {fileID: 8300000, guid: 6345b3046b3d86e419a11be3d388aac2, type: 3}
     volume: 0.387
     pitch: 1.48
     loop: 0

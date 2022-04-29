@@ -891,7 +891,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 895127068}
         m_TargetAssemblyTypeName: ChangeSceneButton, Assembly-CSharp
-        m_MethodName: PressButtonSound
+        m_MethodName: PressButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1929,12 +1929,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3688802167462590068, guid: 12ca941a07aaa1e4b883c5e03fcda392, type: 3}
+      propertyPath: m_Volume
+      value: 0.787
+      objectReference: {fileID: 0}
     - target: {fileID: 4100712612573506062, guid: 12ca941a07aaa1e4b883c5e03fcda392, type: 3}
       propertyPath: m_Name
       value: BGMTemp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12ca941a07aaa1e4b883c5e03fcda392, type: 3}
+--- !u!1 &550563510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4100712612573506062, guid: 12ca941a07aaa1e4b883c5e03fcda392, type: 3}
+  m_PrefabInstance: {fileID: 550563509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &550563511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550563510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b4a26bd6f0a7d4195aca104a5de6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundClip: Theme1
+  AudioManager: {fileID: 8659494999804696263}
 --- !u!1 &551490972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,7 +3318,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 895127068}
         m_TargetAssemblyTypeName: ChangeSceneButton, Assembly-CSharp
-        m_MethodName: HSMenuSound
+        m_MethodName: PressButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3584,7 +3607,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 895127068}
         m_TargetAssemblyTypeName: ChangeSceneButton, Assembly-CSharp
-        m_MethodName: QuitSound
+        m_MethodName: PressButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6435,7 +6458,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 895127068}
         m_TargetAssemblyTypeName: ChangeSceneButton, Assembly-CSharp
-        m_MethodName: PressButtonSound
+        m_MethodName: PressButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8121,3 +8144,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1d0dad95878ee41a6215ae24c96df8, type: 3}
+--- !u!114 &8659494999804696263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8659495001354192359, guid: aa1d0dad95878ee41a6215ae24c96df8, type: 3}
+  m_PrefabInstance: {fileID: 8659494999804696262}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099a35cbc4f16a241bcdfea8cfc410ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
