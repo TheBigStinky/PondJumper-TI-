@@ -8,19 +8,22 @@ public class TractorBeamKill : MonoBehaviour
     bool caught;
     GameObject player;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.GetComponent<Rigidbody>().isKinematic && other.tag == "Player")
         {
             caught = true;
-            player = other.gameObject;
         }
         else if(other.gameObject.GetComponent<CharacterController>().enabled && other.tag == "Player")
         {
             other.gameObject.GetComponent<CharacterController>().enabled = false;
             contactPoint = transform.position - other.transform.position;
             caught = true;
-            player = other.gameObject;
         }
     }
 
