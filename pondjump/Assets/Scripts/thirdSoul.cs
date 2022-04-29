@@ -514,7 +514,6 @@ public class thirdSoul : MonoBehaviour
         if (pausemenu.paused)
             return;
 
-
     }
 
     void LaunchIndicatorCheck(float active)
@@ -577,11 +576,6 @@ public class thirdSoul : MonoBehaviour
 
         // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
         Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedHieght, transform.position.z), GroundRadius);
-    }
-
-    public void PlayerSounds()
-    {
-
     }
 
 
