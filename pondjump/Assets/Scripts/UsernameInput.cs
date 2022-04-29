@@ -39,7 +39,7 @@ public class UsernameInput : MonoBehaviour
     public void SubmitName()
     {
     
-        newusername = inputfield.text;
+        
 
 
     }
@@ -56,6 +56,7 @@ public class UsernameInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      
+       
     }
 }

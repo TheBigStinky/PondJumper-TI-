@@ -17,7 +17,7 @@ public class PopUpManager : MonoBehaviour
     bool textOnly;
     PlayerInput playerInput;
 
-    public int Collection;
+   public static int Collection;
 
     // Start is called before the first frame update
     void Start()
