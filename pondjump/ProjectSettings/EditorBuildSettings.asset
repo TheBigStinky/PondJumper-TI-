@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/MainMenu/MainMenu_REAL.unity
     guid: e855a95f624d76e42b7db5002dace66c
   - enabled: 1
-    path: Assets/Alex's Lab/AlexWell PT01.unity
+    path: Assets/Scenes/AlexWell PT01.unity
     guid: 952f1dfcfe8c12544814937d4e102574
   - enabled: 1
     path: Assets/Scenes/AlexGrapple.unity
