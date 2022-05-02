@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GrapplingGun : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GrapplingGun : MonoBehaviour
     public float maxDistance;
     private SpringJoint joint;
     float refreshTimer;
+    bool grappleEnable;
 
     bool grappling;
     Transform StuckToo;
@@ -29,11 +31,12 @@ public class GrapplingGun : MonoBehaviour
     {
         lr = GetComponent<LineRenderer>();
         refreshTimer = Refresh;
+        grappleEnable = SceneManager.GetActiveScene().buildIndex != 1;
     }
 
     public void Grapple(InputAction.CallbackContext context)
     {
-        if (context.started && refreshTimer >= Refresh)
+        if (context.started && refreshTimer >= Refresh && grappleEnable)
         {
             StartGrapple();
         }

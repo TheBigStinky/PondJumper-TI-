@@ -15,6 +15,267 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
     ""name"": ""FirstPersonControls"",
     ""maps"": [
         {
+            ""name"": ""Player(noGrapp)"",
+            ""id"": ""1d23927a-d2ca-4d5a-97f9-ebe54298ed88"",
+            ""actions"": [
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""b7cdcdc7-cf6c-47ab-8b94-893d202be672"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""bb91ec81-52c5-455f-a04b-b9c7922db16d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""e58e6262-6dc4-4958-bc8c-2e459fbb8a6a"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""3deef026-107a-4ff0-af12-47955d00cd93"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Primary"",
+                    ""type"": ""Button"",
+                    ""id"": ""66390a20-2fa1-4b7a-89d2-3c21c8fdd0bb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Secondary"",
+                    ""type"": ""Button"",
+                    ""id"": ""933d0dd8-7f0d-45dd-9b90-b7a9efd990d5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Crouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""4cb1e5a5-9669-4ab4-acc7-682ab259cd9d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Fire Mode Switch"",
+                    ""type"": ""Button"",
+                    ""id"": ""0de2e8dd-fa8c-42a5-8536-b2c629e318d2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Scroll"",
+                    ""type"": ""Value"",
+                    ""id"": ""cf68c830-2694-42af-85bc-ab254d411043"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Paused"",
+                    ""type"": ""Value"",
+                    ""id"": ""354825a0-1322-49d4-8745-6b86cfa85102"",
+                    ""expectedControlType"": ""Key"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Console"",
+                    ""type"": ""Button"",
+                    ""id"": ""baa7ecb5-821f-4b88-bfd9-cd406fbfcc41"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0c40316f-7c18-4e52-8efd-e227d889318a"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""deb6d34d-41a4-4e84-9df2-13f798544f9c"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""75a0368b-36bb-4724-af0a-2142863a8255"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2a99ceac-ddd1-48f3-8724-fd7ce6d6c711"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""49153bd0-c8c3-4f8c-a7a1-ea4c0fac22f5"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""cd78ba83-863e-4c70-a67d-84dc053bebae"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b5d3447-403d-4554-aaa0-fe17f97e2722"",
+                    ""path"": ""<Pointer>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17a8120b-7e00-4dbd-8055-1273c12e8cea"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e401b050-7bf1-4ba8-aca1-d1c4d9f17a72"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Primary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b216c9b1-6198-49f8-9923-5a0974cc6fef"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Secondary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58db60f0-c2e2-4308-a952-c54f263fc5e1"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea7fd6e9-87ea-434f-b63a-66725fe35937"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire Mode Switch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3f65388-9b3d-432e-adb7-b686a05571fa"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da426717-3eb3-4e64-84a4-f9b97ce5d51c"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Paused"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5e68befc-ea1a-45dc-8163-f3298672b8e8"",
+                    ""path"": ""<Keyboard>/backquote"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Console"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""Player"",
             ""id"": ""cdcb3d66-25b2-41ed-8b03-19bb8be402ff"",
             ""actions"": [
@@ -95,14 +356,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""e15688f6-919c-417f-9a6a-f5938ad88a50"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Reset Pos"",
-                    ""type"": ""Button"",
-                    ""id"": ""57c23cbe-2d92-4b20-b080-d8416891ebb3"",
-                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -275,17 +528,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Scroll"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6df5c79c-88a6-497e-86f1-73b62f49032d"",
-                    ""path"": ""<Keyboard>/5"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reset Pos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -822,6 +1064,19 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
+        // Player(noGrapp)
+        m_PlayernoGrapp = asset.FindActionMap("Player(noGrapp)", throwIfNotFound: true);
+        m_PlayernoGrapp_Jump = m_PlayernoGrapp.FindAction("Jump", throwIfNotFound: true);
+        m_PlayernoGrapp_Move = m_PlayernoGrapp.FindAction("Move", throwIfNotFound: true);
+        m_PlayernoGrapp_Look = m_PlayernoGrapp.FindAction("Look", throwIfNotFound: true);
+        m_PlayernoGrapp_Sprint = m_PlayernoGrapp.FindAction("Sprint", throwIfNotFound: true);
+        m_PlayernoGrapp_Primary = m_PlayernoGrapp.FindAction("Primary", throwIfNotFound: true);
+        m_PlayernoGrapp_Secondary = m_PlayernoGrapp.FindAction("Secondary", throwIfNotFound: true);
+        m_PlayernoGrapp_Crouch = m_PlayernoGrapp.FindAction("Crouch", throwIfNotFound: true);
+        m_PlayernoGrapp_FireModeSwitch = m_PlayernoGrapp.FindAction("Fire Mode Switch", throwIfNotFound: true);
+        m_PlayernoGrapp_Scroll = m_PlayernoGrapp.FindAction("Scroll", throwIfNotFound: true);
+        m_PlayernoGrapp_Paused = m_PlayernoGrapp.FindAction("Paused", throwIfNotFound: true);
+        m_PlayernoGrapp_Console = m_PlayernoGrapp.FindAction("Console", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
@@ -834,7 +1089,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         m_Player_FireModeSwitch = m_Player.FindAction("Fire Mode Switch", throwIfNotFound: true);
         m_Player_Grapple = m_Player.FindAction("Grapple", throwIfNotFound: true);
         m_Player_Scroll = m_Player.FindAction("Scroll", throwIfNotFound: true);
-        m_Player_ResetPos = m_Player.FindAction("Reset Pos", throwIfNotFound: true);
         m_Player_Paused = m_Player.FindAction("Paused", throwIfNotFound: true);
         m_Player_Console = m_Player.FindAction("Console", throwIfNotFound: true);
         // UI
@@ -895,6 +1149,119 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
+    // Player(noGrapp)
+    private readonly InputActionMap m_PlayernoGrapp;
+    private IPlayernoGrappActions m_PlayernoGrappActionsCallbackInterface;
+    private readonly InputAction m_PlayernoGrapp_Jump;
+    private readonly InputAction m_PlayernoGrapp_Move;
+    private readonly InputAction m_PlayernoGrapp_Look;
+    private readonly InputAction m_PlayernoGrapp_Sprint;
+    private readonly InputAction m_PlayernoGrapp_Primary;
+    private readonly InputAction m_PlayernoGrapp_Secondary;
+    private readonly InputAction m_PlayernoGrapp_Crouch;
+    private readonly InputAction m_PlayernoGrapp_FireModeSwitch;
+    private readonly InputAction m_PlayernoGrapp_Scroll;
+    private readonly InputAction m_PlayernoGrapp_Paused;
+    private readonly InputAction m_PlayernoGrapp_Console;
+    public struct PlayernoGrappActions
+    {
+        private @FirstPersonControls m_Wrapper;
+        public PlayernoGrappActions(@FirstPersonControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Jump => m_Wrapper.m_PlayernoGrapp_Jump;
+        public InputAction @Move => m_Wrapper.m_PlayernoGrapp_Move;
+        public InputAction @Look => m_Wrapper.m_PlayernoGrapp_Look;
+        public InputAction @Sprint => m_Wrapper.m_PlayernoGrapp_Sprint;
+        public InputAction @Primary => m_Wrapper.m_PlayernoGrapp_Primary;
+        public InputAction @Secondary => m_Wrapper.m_PlayernoGrapp_Secondary;
+        public InputAction @Crouch => m_Wrapper.m_PlayernoGrapp_Crouch;
+        public InputAction @FireModeSwitch => m_Wrapper.m_PlayernoGrapp_FireModeSwitch;
+        public InputAction @Scroll => m_Wrapper.m_PlayernoGrapp_Scroll;
+        public InputAction @Paused => m_Wrapper.m_PlayernoGrapp_Paused;
+        public InputAction @Console => m_Wrapper.m_PlayernoGrapp_Console;
+        public InputActionMap Get() { return m_Wrapper.m_PlayernoGrapp; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayernoGrappActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayernoGrappActions instance)
+        {
+            if (m_Wrapper.m_PlayernoGrappActionsCallbackInterface != null)
+            {
+                @Jump.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnJump;
+                @Move.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnMove;
+                @Look.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnLook;
+                @Sprint.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnSprint;
+                @Sprint.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnSprint;
+                @Sprint.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnSprint;
+                @Primary.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnPrimary;
+                @Primary.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnPrimary;
+                @Primary.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnPrimary;
+                @Secondary.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnSecondary;
+                @Secondary.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnSecondary;
+                @Secondary.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnSecondary;
+                @Crouch.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnCrouch;
+                @Crouch.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnCrouch;
+                @Crouch.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnCrouch;
+                @FireModeSwitch.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnFireModeSwitch;
+                @FireModeSwitch.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnFireModeSwitch;
+                @FireModeSwitch.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnFireModeSwitch;
+                @Scroll.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnScroll;
+                @Scroll.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnScroll;
+                @Scroll.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnScroll;
+                @Paused.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnPaused;
+                @Paused.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnPaused;
+                @Paused.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnPaused;
+                @Console.started -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnConsole;
+                @Console.performed -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnConsole;
+                @Console.canceled -= m_Wrapper.m_PlayernoGrappActionsCallbackInterface.OnConsole;
+            }
+            m_Wrapper.m_PlayernoGrappActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
+                @Sprint.started += instance.OnSprint;
+                @Sprint.performed += instance.OnSprint;
+                @Sprint.canceled += instance.OnSprint;
+                @Primary.started += instance.OnPrimary;
+                @Primary.performed += instance.OnPrimary;
+                @Primary.canceled += instance.OnPrimary;
+                @Secondary.started += instance.OnSecondary;
+                @Secondary.performed += instance.OnSecondary;
+                @Secondary.canceled += instance.OnSecondary;
+                @Crouch.started += instance.OnCrouch;
+                @Crouch.performed += instance.OnCrouch;
+                @Crouch.canceled += instance.OnCrouch;
+                @FireModeSwitch.started += instance.OnFireModeSwitch;
+                @FireModeSwitch.performed += instance.OnFireModeSwitch;
+                @FireModeSwitch.canceled += instance.OnFireModeSwitch;
+                @Scroll.started += instance.OnScroll;
+                @Scroll.performed += instance.OnScroll;
+                @Scroll.canceled += instance.OnScroll;
+                @Paused.started += instance.OnPaused;
+                @Paused.performed += instance.OnPaused;
+                @Paused.canceled += instance.OnPaused;
+                @Console.started += instance.OnConsole;
+                @Console.performed += instance.OnConsole;
+                @Console.canceled += instance.OnConsole;
+            }
+        }
+    }
+    public PlayernoGrappActions @PlayernoGrapp => new PlayernoGrappActions(this);
+
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
@@ -908,7 +1275,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_FireModeSwitch;
     private readonly InputAction m_Player_Grapple;
     private readonly InputAction m_Player_Scroll;
-    private readonly InputAction m_Player_ResetPos;
     private readonly InputAction m_Player_Paused;
     private readonly InputAction m_Player_Console;
     public struct PlayerActions
@@ -925,7 +1291,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         public InputAction @FireModeSwitch => m_Wrapper.m_Player_FireModeSwitch;
         public InputAction @Grapple => m_Wrapper.m_Player_Grapple;
         public InputAction @Scroll => m_Wrapper.m_Player_Scroll;
-        public InputAction @ResetPos => m_Wrapper.m_Player_ResetPos;
         public InputAction @Paused => m_Wrapper.m_Player_Paused;
         public InputAction @Console => m_Wrapper.m_Player_Console;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -967,9 +1332,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 @Scroll.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScroll;
                 @Scroll.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScroll;
                 @Scroll.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScroll;
-                @ResetPos.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetPos;
-                @ResetPos.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetPos;
-                @ResetPos.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetPos;
                 @Paused.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPaused;
                 @Paused.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPaused;
                 @Paused.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPaused;
@@ -1010,9 +1372,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 @Scroll.started += instance.OnScroll;
                 @Scroll.performed += instance.OnScroll;
                 @Scroll.canceled += instance.OnScroll;
-                @ResetPos.started += instance.OnResetPos;
-                @ResetPos.performed += instance.OnResetPos;
-                @ResetPos.canceled += instance.OnResetPos;
                 @Paused.started += instance.OnPaused;
                 @Paused.performed += instance.OnPaused;
                 @Paused.canceled += instance.OnPaused;
@@ -1128,6 +1487,20 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+    public interface IPlayernoGrappActions
+    {
+        void OnJump(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
+        void OnPrimary(InputAction.CallbackContext context);
+        void OnSecondary(InputAction.CallbackContext context);
+        void OnCrouch(InputAction.CallbackContext context);
+        void OnFireModeSwitch(InputAction.CallbackContext context);
+        void OnScroll(InputAction.CallbackContext context);
+        void OnPaused(InputAction.CallbackContext context);
+        void OnConsole(InputAction.CallbackContext context);
+    }
     public interface IPlayerActions
     {
         void OnJump(InputAction.CallbackContext context);
@@ -1140,7 +1513,6 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         void OnFireModeSwitch(InputAction.CallbackContext context);
         void OnGrapple(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
-        void OnResetPos(InputAction.CallbackContext context);
         void OnPaused(InputAction.CallbackContext context);
         void OnConsole(InputAction.CallbackContext context);
     }

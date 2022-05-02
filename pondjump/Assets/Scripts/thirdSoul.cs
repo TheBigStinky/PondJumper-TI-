@@ -128,6 +128,7 @@ public class thirdSoul : MonoBehaviour
         firstPersonControls = new FirstPersonControls();
         firstPersonControls.Player.Enable();
 
+
         if (mainCamera == null)
         {
             mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -146,6 +147,8 @@ public class thirdSoul : MonoBehaviour
         {
             LCRuneSets.Add(null);
         }
+
+        
 
         Cursor.lockState = CursorLockMode.Locked;
 
