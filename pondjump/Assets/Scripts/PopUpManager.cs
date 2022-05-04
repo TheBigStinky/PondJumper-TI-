@@ -42,7 +42,6 @@ public class PopUpManager : MonoBehaviour
             popUpText.SetText(_recievedText);
 
             Time.timeScale = 0;
-            AudioListener.pause = true;
             Cursor.lockState = CursorLockMode.None;
             other.gameObject.SetActive(false);
         }
@@ -59,7 +58,6 @@ public class PopUpManager : MonoBehaviour
 
 
             Time.timeScale = 0;
-            AudioListener.pause = true;
             Cursor.lockState = CursorLockMode.None;
             other.gameObject.SetActive(false);
         }
@@ -79,7 +77,6 @@ public class PopUpManager : MonoBehaviour
         { PopUpTextCanvas.SetActive(false); }
         else { PopUpImageCanvas.SetActive(false); }
         Time.timeScale = 1;
-        AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.Locked;
         playerInput.enabled = true;
     }
