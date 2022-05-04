@@ -14347,7 +14347,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54460
+  m_Name: pb_Mesh53176
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17711,6 +17711,18 @@ PrefabInstance:
     - target: {fileID: 5474906755208046954, guid: a607bc22047e58844aab9380436959fa, type: 3}
       propertyPath: m_Name
       value: aShroom02(v1) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474906755208046954, guid: a607bc22047e58844aab9380436959fa, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059406959990767696, guid: a607bc22047e58844aab9380436959fa, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205895959583658329, guid: a607bc22047e58844aab9380436959fa, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a607bc22047e58844aab9380436959fa, type: 3}
