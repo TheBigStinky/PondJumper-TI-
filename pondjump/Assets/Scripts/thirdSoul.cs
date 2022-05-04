@@ -69,7 +69,7 @@ public class thirdSoul : MonoBehaviour
     //the actual player speed
     float speed;
     //whether shift and ctrl are being held
-    bool sprinting, crouching;
+    bool sprinting;
     Vector3 platformPositionStorage;
 
     [Space(10)]
@@ -255,13 +255,6 @@ public class thirdSoul : MonoBehaviour
             transform.position = ResetPoint;
 
         }
-    }
-
-    //Detects if Ctrl is being held
-    public void Crouch(InputAction.CallbackContext context)
-    {
-        if (context.started) { crouching = true; }
-        else if (context.canceled) { crouching = false; }
     }
 
     //Detects if Shift is being held

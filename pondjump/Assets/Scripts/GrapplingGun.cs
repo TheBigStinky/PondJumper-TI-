@@ -17,7 +17,8 @@ public class GrapplingGun : MonoBehaviour
     private LineRenderer lr;
     private Vector3 grapplePoint;
     public LayerMask whatIsGrappleable, interactableLayers;
-    public Transform gunTip, camera, player;
+    public Transform gunTip, player;
+    GameObject mCamera;
     public float maxDistance;
     private SpringJoint joint;
     float refreshTimer;
@@ -32,6 +33,7 @@ public class GrapplingGun : MonoBehaviour
         lr = GetComponent<LineRenderer>();
         refreshTimer = Refresh;
         grappleEnable = SceneManager.GetActiveScene().buildIndex != 1;
+        mCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     public void Grapple(InputAction.CallbackContext context)
@@ -57,7 +59,7 @@ public class GrapplingGun : MonoBehaviour
             grapplePoint = StuckToo.position + StartingPoint;
             joint.connectedAnchor = StuckToo.position + StartingPoint;
 
-            if (Vector3.Distance(camera.position, StuckToo.position) < 5)
+            if (Vector3.Distance(mCamera.transform.position, StuckToo.position) < 5)
             {
                 player.gameObject.GetComponent<thirdSoul>().GrapplePhysicsEnd();
             }
@@ -79,7 +81,7 @@ public class GrapplingGun : MonoBehaviour
         RaycastHit sphere, line;
         bool lineHit = false;
 
-        if (Physics.Raycast(camera.position, camera.forward, out line, maxDistance, interactableLayers))
+        if (Physics.Raycast(mCamera.transform.position, mCamera.transform.forward, out line, maxDistance, interactableLayers))
         {
 
             if((whatIsGrappleable & (1 << line.transform.gameObject.layer)) != 0)
@@ -115,7 +117,7 @@ public class GrapplingGun : MonoBehaviour
             }
         }
         
-        if (Physics.SphereCast(camera.position, AimAssistRadius, camera.forward, out sphere, maxDistance) && !lineHit)
+        if (Physics.SphereCast(mCamera.transform.position, AimAssistRadius, mCamera.transform.forward, out sphere, maxDistance) && !lineHit)
         {
             if((whatIsGrappleable & (1 << sphere.transform.gameObject.layer)) != 0)
             {
