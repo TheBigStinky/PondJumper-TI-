@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_fish01
+  m_Name: Shader Graphs_fish01 2
   m_Shader: {fileID: -6465566751694194690, guid: 95231f73aafc7594c83b63f6e1a17ac3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
