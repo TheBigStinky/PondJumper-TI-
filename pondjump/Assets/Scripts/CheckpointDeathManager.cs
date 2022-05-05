@@ -51,14 +51,7 @@ public class CheckpointDeathManager : MonoBehaviour
     {
         Healing();
 
-        if (Damage >= 1 && !GodMode && SceneDeath)
-        {
-            DeathCount++;
-            Debug.Log("DeathCount: " + DeathCount);
-            Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(1);
-        }
-        else if (Damage >= 1 && !GodMode && !SceneDeath)
+        if (Damage >= 1 && !GodMode)
         {
             DeathCount++;
             Debug.Log("DeathCount: " + DeathCount);
@@ -110,7 +103,7 @@ public class CheckpointDeathManager : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log(other.name);
-        if (other.transform.tag == "Deadly" && Damage < 0.33)
+        if (other.transform.tag == "Deadly" && Damage < 0.32)
         {
             Damage = 0.33f;
         }
