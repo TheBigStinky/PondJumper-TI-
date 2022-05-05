@@ -10,6 +10,7 @@ public class UsernameInput : MonoBehaviour
     public Button yes;
     public Button no;
     public Text popuptext;
+    //public Text startingText;
     public static string newusername;
     public InputField inputfield;
 
@@ -17,6 +18,8 @@ public class UsernameInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        //startingText.text = "Hello! What's your name?" ;
         inputfield = inputbox.GetComponent<InputField>();
         popup.SetActive(false);
 
@@ -31,7 +34,7 @@ public class UsernameInput : MonoBehaviour
         {
             popup.SetActive(true);
             inputbox.SetActive(false);
-            popuptext.text = "Hello " + inputfield.text + ". Would you like to play?";
+            popuptext.text = "Hello " + inputfield.text + ". Is this is the name you would like to use?";
         }
 
     }
