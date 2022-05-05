@@ -45,3 +45,83 @@ MonoBehaviour:
       m_YScaleBool: 1
       m_ZScaleBool: 1
     name: vineProto_prefab
+  - gameObject: {fileID: 6557518713125552957, guid: feb1c8ced4dfda14b90a84d1108d849d, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 90, y: 0, z: 0}
+      m_RotationRangeMax: {x: 90, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 3, y: 3, z: 3}
+      m_ScaleRangeMax: {x: 4, y: 4, z: 4}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: smStone01
+  - gameObject: {fileID: 719176738857091317, guid: daa9162b1ac1cbe4e94cde9d3a2f4b2f, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 90, y: 0, z: 0}
+      m_RotationRangeMax: {x: 90, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 3, y: 3, z: 3}
+      m_ScaleRangeMax: {x: 4, y: 4, z: 4}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: smStone02
+  - gameObject: {fileID: 5309414524381828375, guid: 5a632640e04a60549b12f74ff8f93435, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 90, y: 0, z: 0}
+      m_RotationRangeMax: {x: 90, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 3, y: 3, z: 3}
+      m_ScaleRangeMax: {x: 4, y: 4, z: 4}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: stick01
+  - gameObject: {fileID: 800524801290066030, guid: e7c85c1f6bcc0af4db07b6362f0d4303, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 90, y: 0, z: 0}
+      m_RotationRangeMax: {x: 90, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 3, y: 3, z: 3}
+      m_ScaleRangeMax: {x: 4, y: 4, z: 4}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: stick02
+  - gameObject: {fileID: 1915703076511497260, guid: 94df62702bf0ed146aa702aa9a004dfc, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 90, y: 0, z: 0}
+      m_RotationRangeMax: {x: 90, y: 360, z: 0}
+      m_ScaleRangeMin: {x: 3, y: 3, z: 3}
+      m_ScaleRangeMax: {x: 4, y: 4, z: 4}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 1
+      m_YRotationBool: 1
+      m_ZRotationBool: 0
+      m_XScaleBool: 1
+      m_YScaleBool: 1
+      m_ZScaleBool: 1
+    name: stick03
