@@ -7,6 +7,7 @@ using TMPro;
 
 public class PopUpManager : MonoBehaviour
 {
+    public AudioManager audioManager;
     public GameObject pickupEffect;
     public GameObject PopUpTextCanvas;
     public GameObject PopUpImageCanvas;
@@ -28,6 +29,7 @@ public class PopUpManager : MonoBehaviour
 
         PopUpTextCanvas.SetActive(false);
         PopUpImageCanvas.SetActive(false);
+        audioManager = GameObject.Find("AudioManager 1").GetComponent<AudioManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -65,6 +67,7 @@ public class PopUpManager : MonoBehaviour
         {
             // Instantiate(pickupEffect, transform.position, transform.rotation);
             pickupEffect.GetComponent<ParticleSystem>().Play();
+            audioManager.Play("CatchCast");
             Collection++;
             other.gameObject.SetActive(false);
             Debug.Log("Score: " + Collection);
