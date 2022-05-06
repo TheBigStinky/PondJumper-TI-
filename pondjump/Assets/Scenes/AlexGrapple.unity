@@ -17325,6 +17325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGMTemp
       objectReference: {fileID: 0}
+    - target: {fileID: 4100712612573506062, guid: 12ca941a07aaa1e4b883c5e03fcda392, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12ca941a07aaa1e4b883c5e03fcda392, type: 3}
 --- !u!43 &1084211236
@@ -17924,7 +17928,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh230146
+  m_Name: pb_Mesh281912
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18866,6 +18870,7 @@ GameObject:
   - component: {fileID: 1190161401}
   - component: {fileID: 1190161400}
   - component: {fileID: 1190161399}
+  - component: {fileID: 1190161404}
   m_Layer: 13
   m_Name: Floors (1)
   m_TagString: Untagged
@@ -18882,7 +18887,7 @@ MeshCollider:
   m_GameObject: {fileID: 1190161398}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -19079,6 +19084,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1190161404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190161398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.8286133, y: 0, z: 16.244234}
+  m_Center: {x: 0.3394928, y: -4.27813, z: 12.128795}
 --- !u!1001 &1190696554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21024,6 +21042,30 @@ PrefabInstance:
     - target: {fileID: 4470485353371053551, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470485353521563899, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470485353521563899, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470485353521563899, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470485354028420373, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470485354028420373, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470485354028420373, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7247262859918867076, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -25570,7 +25612,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh230500
+  m_Name: pb_Mesh282266
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29230,7 +29272,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh230450
+  m_Name: pb_Mesh282216
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
