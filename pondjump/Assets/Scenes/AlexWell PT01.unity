@@ -38708,6 +38708,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 28.082
       objectReference: {fileID: 0}
+    - target: {fileID: 65702495048144492, guid: 0a76fe0bffceaea4f9a06cd850a6671b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0a76fe0bffceaea4f9a06cd850a6671b, type: 3}
       propertyPath: m_Name
       value: TOXIC

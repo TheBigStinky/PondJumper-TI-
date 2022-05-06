@@ -10,7 +10,9 @@ public class UsernameInput : MonoBehaviour
     public Button yes;
     public Button no;
     public Text popuptext;
-    public static string newusername;
+    public static string newusername="";
+    public static bool userCountAdd;
+
     public InputField inputfield;
 
 
@@ -19,8 +21,7 @@ public class UsernameInput : MonoBehaviour
     {
         inputfield = inputbox.GetComponent<InputField>();
         popup.SetActive(false);
-
-
+        userCountAdd = false;
 
 
     }
@@ -40,7 +41,7 @@ public class UsernameInput : MonoBehaviour
     {
     
         newusername = inputfield.text;
-
+        userCountAdd = true;
 
     }
 
