@@ -22,7 +22,6 @@ public class PickASound : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playSounds.Play();
-            Destroy(GetComponent<BoxCollider>());
 
 
         }
