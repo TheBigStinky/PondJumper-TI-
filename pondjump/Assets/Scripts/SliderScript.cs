@@ -25,8 +25,8 @@ public class SliderScript : MonoBehaviour
     }
     void Start()
     {
-       
-       
+
+       // Debug.Log(mainVolume + "this is the main volume");
         volumeSlider.value = mainVolume;
 
        // mainVolume = curVolume;
@@ -35,7 +35,7 @@ public class SliderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        volumeSlider.value = mainVolume;
         
     }
 
@@ -43,6 +43,6 @@ public class SliderScript : MonoBehaviour
     {
         mainVolume = volumeSlider.value;
         //managerType.GetComponent<>
-        //audioManager.VolumeChange();
+        audioManager.VolumeChange();
     }
 }

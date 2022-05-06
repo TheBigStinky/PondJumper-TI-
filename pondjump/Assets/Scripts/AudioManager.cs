@@ -1,5 +1,6 @@
 using UnityEngine.Audio;
 using System;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -7,20 +8,25 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-
+   
 
     void Awake()
     {
+        //Debug.Log(SliderScript.mainVolume + "this is the main volume, but from the audio manager");
+
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
+            s.volume = SliderScript.mainVolume;
             s.source.clip = s.clip;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            
         }
-    }
 
+       
+    }
 
     public void Play(string name)
     {
@@ -30,6 +36,27 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+
+
+    }
+
+    public void VolumeChange()
+    {
+        //for (int i = 0; i < sounds.Length; i++)
+       // {
+         //   sounds[i].volume = SliderScript.mainVolume;
+            
+
+      //  }
+
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = SliderScript.mainVolume;
+            s.volume = SliderScript.mainVolume;
+
+
+        }
+        //Debug.Log("this is running?" + sounds[0].volume);
 
 
     }
