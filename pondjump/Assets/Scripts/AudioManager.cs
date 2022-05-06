@@ -8,11 +8,11 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-    
+   
 
     void Awake()
     {
-       
+        //Debug.Log(SliderScript.mainVolume + "this is the main volume, but from the audio manager");
 
         foreach (Sound s in sounds)
         {
@@ -42,12 +42,21 @@ public class AudioManager : MonoBehaviour
 
     public void VolumeChange()
     {
-        for (int i = 0; i < sounds.Length; i++)
+        //for (int i = 0; i < sounds.Length; i++)
+       // {
+         //   sounds[i].volume = SliderScript.mainVolume;
+            
+
+      //  }
+
+        foreach (Sound s in sounds)
         {
-            sounds[i].volume = SliderScript.mainVolume;
+            s.source.volume = SliderScript.mainVolume;
+            s.volume = SliderScript.mainVolume;
 
 
         }
+        //Debug.Log("this is running?" + sounds[0].volume);
 
 
     }
