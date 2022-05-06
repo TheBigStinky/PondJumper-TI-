@@ -76,7 +76,7 @@ public class LaunchBehavior : MonoBehaviour
                 Player.GetComponent<thirdSoul>().LaunchStart();
                 other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-                difference = Catch.transform.position - transform.position;
+                difference = Catch.transform.position - other.transform.position;
 
                 other.GetComponent<Rigidbody>().AddForce(Vector3.Scale(difference + TargetHeight, VelocityMultiplier) * ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3));
                 Debug.Log("Difference: " + difference + " Distance: " + Vector3.Magnitude(difference) + " Multiplier: " + ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3) + " Launch: " + Vector3.Scale(difference, VelocityMultiplier) * ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3)); 
