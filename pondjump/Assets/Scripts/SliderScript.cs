@@ -43,6 +43,6 @@ public class SliderScript : MonoBehaviour
     {
         mainVolume = volumeSlider.value;
         //managerType.GetComponent<>
-        audioManager.VolumeChange();
+        //audioManager.VolumeChange();
     }
 }
