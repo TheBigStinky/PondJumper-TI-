@@ -16475,6 +16475,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 4334557607947211137, guid: 8c3bf2a108d684fad9c3b3fe0a47e2db, type: 3}
+      propertyPath: DeliveryText
+      value: Press E to Grapple to Mushrooms
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c3bf2a108d684fad9c3b3fe0a47e2db, type: 3}
 --- !u!4 &964973046 stripped
@@ -20957,7 +20961,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 834524130460529903, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1672666188256019173, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
       propertyPath: m_Layer
@@ -21067,6 +21071,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5030729413417484338, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7247262859918867076, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -21081,7 +21089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388852682285261436, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -841.6631
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7438395709005713873, guid: 1ff06ded654b38144915765f16e6001b, type: 3}
       propertyPath: m_PresetInfoIsWorld

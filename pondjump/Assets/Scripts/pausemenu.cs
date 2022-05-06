@@ -38,6 +38,7 @@ public class pausemenu : MonoBehaviour
     public void Start()
     {
         PauseCanvas1.SetActive(false);
+        PauseBlock.SetActive(false);
         Resume();
         action.Player.Paused.performed += _ => DeterminePause();
     }
