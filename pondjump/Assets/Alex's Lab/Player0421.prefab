@@ -8018,11 +8018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2350833083289093907, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350833083289093907, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350833083289093907, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
       propertyPath: m_AnchorMin.x
@@ -8034,7 +8034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2350833083289093907, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -840.3508
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350833083289093907, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -8088,9 +8088,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2487921354728841195, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5584884790319354240, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584884790319354240, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8f5ee48d7656842b6c7d313e9239c9, type: 3}

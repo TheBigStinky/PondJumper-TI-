@@ -39,7 +39,6 @@ public class pausemenu : MonoBehaviour
     {
         PauseCanvas1.SetActive(false);
         PauseBlock.SetActive(false);
-
         Resume();
         action.Player.Paused.performed += _ => DeterminePause();
     }
@@ -76,7 +75,7 @@ public class pausemenu : MonoBehaviour
 
         Time.timeScale = 1;
         AudioListener.pause = false;
-        AudioManager.SetActive(true);
+        //AudioManager.SetActive(true);
         paused = false;
         PauseCanvas1.SetActive(false);
         AimCanvas.SetActive(true);

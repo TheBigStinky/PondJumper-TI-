@@ -1,10 +1,5 @@
-userName0[John Smith]points0[8]end0
-userName1[Amazing Amanda]points1[3]end1
-userName2[Chris Evans]points2[5]end2
-userName3[Pink Cheese]points3[2]end3
-userName4[daafdafd]points4[0]end4
-userName5[afafdsafds]points5[0]end5
-userName6[1235]points6[0]end6
-userName7[asdfasdfa]points7[0]end7
-userName8[abc]points8[0]end8
-userName9[abc]points9[0]end9
+userName0[]points0[0]end0
+userName1[]points1[0]end1
+userName2[]points2[0]end2
+userName3[]points3[0]end3
+userName4[agoo]points4[0]end4
