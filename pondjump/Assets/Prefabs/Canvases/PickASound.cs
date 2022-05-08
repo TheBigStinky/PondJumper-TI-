@@ -12,7 +12,7 @@ public class PickASound : MonoBehaviour
     {
         playSounds = GetComponent<AudioSource>();
 
-        playSounds.clip = AudioManager.Playing(SoundClip).clip;
+       // playSounds.clip = AudioManager.Playing(SoundClip).clip;
 
     }
 

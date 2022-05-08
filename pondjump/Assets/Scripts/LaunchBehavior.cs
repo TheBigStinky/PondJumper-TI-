@@ -25,7 +25,7 @@ public class LaunchBehavior : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         _LaunchStrength = Player.GetComponent<thirdSoul>().LaunchStrength;
-        
+
     }
 
     void FixedUpdate()
@@ -33,12 +33,12 @@ public class LaunchBehavior : MonoBehaviour
         timer++;
         transform.position = StuckToo.position + StartingPoint;
 
-        if(Catch != null)
+        if (Catch != null)
         {
             Debug.DrawLine(transform.position, Catch.transform.position, Color.yellow);
             Debug.DrawLine(transform.position, Catch.transform.position + (Vector3.up * (CatchHieghtNumeratorConstant / (Catch.transform.position.y - transform.position.y + debugFloat01)) + new Vector3(0, debugFloat03, 0)), Color.green);
         }
-        
+
     }
 
     public void StickTo(Transform surface)
@@ -67,7 +67,7 @@ public class LaunchBehavior : MonoBehaviour
                 otherObj = other.transform.gameObject;
                 //StartCoroutine(launchSequenceInSteps());
                 Vector3 VelocityMultiplier = (other.GetComponent<Rigidbody>().velocity.magnitude > SprintCheck || other.GetComponent<CharacterController>().velocity.magnitude > SprintCheck) ? SprintMultiplier : WalkMultiplier;
-                Vector3 TargetHeight = (other.GetComponent<Rigidbody>().velocity.magnitude > SprintCheck || other.GetComponent<CharacterController>().velocity.magnitude > SprintCheck) ? Vector3.zero : Vector3.up * (CatchHieghtNumeratorConstant / (Catch.transform.position.y - transform.position.y + debugFloat01) + debugFloat02) + new Vector3(0,debugFloat03,0);
+                Vector3 TargetHeight = (other.GetComponent<Rigidbody>().velocity.magnitude > SprintCheck || other.GetComponent<CharacterController>().velocity.magnitude > SprintCheck) ? Vector3.zero : Vector3.up * (CatchHieghtNumeratorConstant / (Catch.transform.position.y - transform.position.y + debugFloat01) + debugFloat02) + new Vector3(0, debugFloat03, 0);
                 //Debug.Log("Rigid Velocity: " + other.GetComponent<Rigidbody>().velocity.magnitude + " Controller Velocity: " + other.GetComponent<CharacterController>().velocity.magnitude);
 
                 Debug.Log("Player: " + Player.name);
@@ -76,10 +76,10 @@ public class LaunchBehavior : MonoBehaviour
                 Player.GetComponent<thirdSoul>().LaunchStart();
                 other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-                difference = Catch.transform.position - transform.position;
+                difference = Catch.transform.position - other.transform.position;
 
                 other.GetComponent<Rigidbody>().AddForce(Vector3.Scale(difference + TargetHeight, VelocityMultiplier) * ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3));
-                Debug.Log("Difference: " + difference + " Distance: " + Vector3.Magnitude(difference) + " Multiplier: " + ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3) + " Launch: " + Vector3.Scale(difference, VelocityMultiplier) * ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3)); 
+                Debug.Log("Difference: " + difference + " Distance: " + Vector3.Magnitude(difference) + " Multiplier: " + ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3) + " Launch: " + Vector3.Scale(difference, VelocityMultiplier) * ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3));
             }
             else if (other.tag != "Platform")
             {
@@ -89,21 +89,4 @@ public class LaunchBehavior : MonoBehaviour
             }
         }
     }
-    IEnumerator launchSequenceInSteps()
-    {
-        yield return new WaitForSeconds(0);
-        Vector3 VelocityMultiplier = (otherObj.GetComponent<Rigidbody>().velocity.magnitude > SprintCheck || otherObj.GetComponent<CharacterController>().velocity.magnitude > SprintCheck) ? SprintMultiplier : WalkMultiplier;
-        Vector3 TargetHeight = (otherObj.GetComponent<Rigidbody>().velocity.magnitude > SprintCheck || otherObj.GetComponent<CharacterController>().velocity.magnitude > SprintCheck) ? Vector3.zero : Vector3.up * (CatchHieghtNumeratorConstant / (Catch.transform.position.y - transform.position.y + debugFloat01) + debugFloat02) + new Vector3(0, debugFloat03, 0);
-
-
-        timer = 0;
-        Player.GetComponent<thirdSoul>().LaunchStart();
-        otherObj.GetComponent<Rigidbody>().velocity = Vector3.zero;
-
-        difference = Catch.transform.position - transform.position;
-
-        otherObj.GetComponent<Rigidbody>().AddForce(Vector3.Scale(difference + TargetHeight, VelocityMultiplier) * ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3));
-        Debug.Log("Difference: " + difference + " Distance: " + Vector3.Magnitude(difference) + " Multiplier: " + ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3) + " Launch: " + Vector3.Scale(difference, VelocityMultiplier) * ((VelocityNumeratorConstant / (Vector3.Magnitude(difference) + 20)) + 3));
-        StopCoroutine(launchSequenceInSteps());
-}
 }

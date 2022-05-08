@@ -573,7 +573,10 @@ public class thirdSoul : MonoBehaviour
         // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
         Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedHieght, transform.position.z), GroundRadius);
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.gameObject.name);
+    }
 
 
 

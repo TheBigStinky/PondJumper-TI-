@@ -7,7 +7,7 @@ public class SliderScript : MonoBehaviour
 {
     public Slider volumeSlider;
    
-    public static float mainVolume;
+    public static float mainVolume = 0.5f;
     public static bool gameRuns;
     public AudioManager audioManager;
 

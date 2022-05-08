@@ -111,7 +111,8 @@ public class ChangeSceneButton : MonoBehaviour
 	{
 		
 		change = sceneName;
-		Invoke("ChangeScene", 2f);
+		//Invoke("ChangeScene", 2f);
+		ChangeScene();
 		Debug.Log(change);
 
 		DontDestroyOnLoad(this.gameObject);
