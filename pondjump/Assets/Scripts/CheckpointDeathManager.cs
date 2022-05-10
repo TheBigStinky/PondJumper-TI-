@@ -43,7 +43,7 @@ public class CheckpointDeathManager : MonoBehaviour
             Debug.Log("Scene " + i + ": " + SceneManager.GetSceneByBuildIndex(i).name);
         }
         */
-
+        DeathMenuCanvas.SetActive(false);
         Checkpoint = transform.position;
     }
 
