@@ -113,6 +113,14 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""DemoReset"",
+                    ""type"": ""Value"",
+                    ""id"": ""382feb94-355c-48ad-a2fa-97c571cf7d86"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -289,6 +297,17 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Console"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""29694a52-15f8-4d9a-950b-f4916786b711"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DemoReset"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -817,6 +836,7 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         m_Player_Scroll = m_Player.FindAction("Scroll", throwIfNotFound: true);
         m_Player_Paused = m_Player.FindAction("Paused", throwIfNotFound: true);
         m_Player_Console = m_Player.FindAction("Console", throwIfNotFound: true);
+        m_Player_DemoReset = m_Player.FindAction("DemoReset", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
@@ -890,6 +910,7 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Scroll;
     private readonly InputAction m_Player_Paused;
     private readonly InputAction m_Player_Console;
+    private readonly InputAction m_Player_DemoReset;
     public struct PlayerActions
     {
         private @FirstPersonControls m_Wrapper;
@@ -906,6 +927,7 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         public InputAction @Scroll => m_Wrapper.m_Player_Scroll;
         public InputAction @Paused => m_Wrapper.m_Player_Paused;
         public InputAction @Console => m_Wrapper.m_Player_Console;
+        public InputAction @DemoReset => m_Wrapper.m_Player_DemoReset;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -951,6 +973,9 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 @Console.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnConsole;
                 @Console.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnConsole;
                 @Console.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnConsole;
+                @DemoReset.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDemoReset;
+                @DemoReset.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDemoReset;
+                @DemoReset.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDemoReset;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -991,6 +1016,9 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
                 @Console.started += instance.OnConsole;
                 @Console.performed += instance.OnConsole;
                 @Console.canceled += instance.OnConsole;
+                @DemoReset.started += instance.OnDemoReset;
+                @DemoReset.performed += instance.OnDemoReset;
+                @DemoReset.canceled += instance.OnDemoReset;
             }
         }
     }
@@ -1114,6 +1142,7 @@ public class @FirstPersonControls : IInputActionCollection, IDisposable
         void OnScroll(InputAction.CallbackContext context);
         void OnPaused(InputAction.CallbackContext context);
         void OnConsole(InputAction.CallbackContext context);
+        void OnDemoReset(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -100,6 +100,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "DemoReset",
+                    "type": "Value",
+                    "id": "382feb94-355c-48ad-a2fa-97c571cf7d86",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -276,6 +284,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Console",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29694a52-15f8-4d9a-950b-f4916786b711",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DemoReset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
