@@ -51,7 +51,7 @@ public class Demo : MonoBehaviour
             DemoFrog.fillAmount = resetHold;
         }
 
-        if(firstPersonControls.Player.DemoReset.ReadValue<float>() > .5)
+        if(firstPersonControls.Player.DemoReset.ReadValue<float>() > .5 && demoMode)
         {
             if (resetHold < 1)
             {
